@@ -1,0 +1,16 @@
+git checkout -b galeria-de-fotos
+
+echo "Conteúdo da galeria de fotos" > galeria.txt
+
+git add galeria.txt
+git commit -m "Adicionar arquivo galeria.txt à branch galeria-de-fotos"
+
+git checkout main
+
+git merge galeria-de-fotos
+
+git branch -d galeria-de-fotos
+
+git push origin main
+
+git push origin --delete galeria-de-fotos
